@@ -1,6 +1,7 @@
 from cleaning import load_and_preprocess_data
 from model import load_model, save_model, train_model
 from recommender import recommend_irrigation
+from visualization import visualize_data
 
 
 def main():
@@ -38,6 +39,8 @@ def main():
     print("\n📊 **Insights**")
     for key, value in insights.items():
         print(f"- {key}: {value}")
+
+    visualize_data(df, soil_moisture_data)
 
 if __name__ == "__main__":
     main()
